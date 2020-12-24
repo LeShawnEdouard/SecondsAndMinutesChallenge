@@ -33,6 +33,11 @@ public class Main {
     // 1 minute = 60 seconds and 1 hour = 60 minutes or 3600 seconds.
     // Methods should be static as we have used previously.
 
-
+    public static int getDurationStrong(int minutes, int seconds) {
+        if((minutes < 0) || (seconds < 0) || (seconds > 59)) {
+            System.out.println("Invalid value");
+        }
+        return 0;
+    }
 
 }
