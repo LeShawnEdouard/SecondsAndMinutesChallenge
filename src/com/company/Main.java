@@ -37,11 +37,12 @@ public class Main {
         if((minutes < 0) || (seconds < 0) || (seconds > 59)) {
             System.out.println("Invalid value");
         }
-        int TotalSeconds = minutes * 60;
-        int TotalMinutes = seconds / 60;
-        int TotalHours = TotalMinutes / 60;
+        int totalSeconds = minutes * 60;
+        int totalMinutes = seconds / 60;
+        int totalHours = totalMinutes / 60;
 
-
+        System.out.println(totalHours + " hours " + totalMinutes + " minutes "
+        + totalSeconds + " seconds ");
         return 0;
     }
 
