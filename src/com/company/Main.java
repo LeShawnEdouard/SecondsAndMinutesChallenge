@@ -3,7 +3,7 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-
+        System.out.println(getDurationString(65, 45));
     }
     // Create a method called getDurationString with two parameters, first parameter
     // minutes and 2nd parameter seconds.
@@ -33,24 +33,22 @@ public class Main {
     // 1 minute = 60 seconds and 1 hour = 60 minutes or 3600 seconds.
     // Methods should be static as we have used previously.
 
-    public static int getDurationString(int minutes, int seconds) {
+    private static String getDurationString(int minutes, int seconds) {
         if((minutes < 0) || (seconds < 0) || (seconds > 59)) {
-            System.out.println("Invalid value");
-        }
-        int totalSeconds = minutes * 60;
-        int totalMinutes = seconds / 60;
-        int totalHours = totalMinutes / 60;
-
-        System.out.println(totalHours + " hours " + totalMinutes + " minutes "
-        + totalSeconds + " seconds ");
-        return 0;
-    }
-
-    public static int getDurationString(int seconds) {
-        if(seconds < 0) {
-            System.out.println("Invalid Value");
+            return "Invalid value";
         }
 
+        int hours = minutes / 60;
+        int remainingMinutes = minutes % 60;
+        return hours + "h " + remainingMinutes + "m " + seconds + "s ";
+
     }
+
+//    public static int getDurationString(int seconds) {
+//        if(seconds < 0) {
+//            System.out.println("Invalid Value");
+//        }
+//
+//    }
 
 }
