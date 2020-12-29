@@ -4,6 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println(getDurationString(65, 45));
+        System.out.println(getDurationString(3945));
     }
     // Create a method called getDurationString with two parameters, first parameter
     // minutes and 2nd parameter seconds.
@@ -50,7 +51,7 @@ public class Main {
         }
         int minutes = seconds / 60;
         int remainingSeconds = seconds % 60;
-        return getDurationString(minutes, seconds);
+        return getDurationString(minutes, remainingSeconds);
     }
 
 }
