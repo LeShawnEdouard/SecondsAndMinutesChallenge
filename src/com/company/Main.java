@@ -5,6 +5,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println(getDurationString(65, 45));
         System.out.println(getDurationString(3945));
+        System.out.println(area(5.0));
     }
     // Create a method called getDurationString with two parameters, first parameter
     // minutes and 2nd parameter seconds.
@@ -71,7 +72,7 @@ public class Main {
 
     // TIPS
     // The formula for calculating the area of a rectangle is x * y
-    // The formula for calculating a circle area is radius * PI.
+    // The formula for calculating a circle area is radius * radius * PI.
     // For PI ue a constant from 'Math' class e.g. 'Math.PI'.
     // All methods need to be defined as public static like we have
     // been doing so far in the course.
@@ -81,15 +82,16 @@ public class Main {
         if(radius < 0) {
             return -1.0;
         }
-
+        double circle = radius * (radius * 3.14);
+        return circle;
     }
 
-    public static double area(double x, double y) {
-        if((x < 0) || (y < 0)) {
-            return -1.0;
-        }
-
-    }
+//    public static double area(double x, double y) {
+//        if((x < 0) || (y < 0)) {
+//            return -1.0;
+//        }
+//
+//    }
 
 
 
