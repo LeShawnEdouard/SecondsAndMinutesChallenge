@@ -83,7 +83,7 @@ public class Main {
         if(radius < 0) {
             return -1.0;
         }
-        double circle = radius * (radius * 3.14);
+        double circle = radius * (radius * Math.PI);
         return circle;
     }
 
