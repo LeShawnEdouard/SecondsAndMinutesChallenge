@@ -44,11 +44,13 @@ public class Main {
 
     }
 
-//    public static int getDurationString(int seconds) {
-//        if(seconds < 0) {
-//            System.out.println("Invalid Value");
-//        }
-//
-//    }
+    private static String getDurationString(int seconds) {
+        if(seconds < 0) {
+            return "Invalid Value";
+        }
+        int minutes = seconds / 60;
+        int remainingSeconds = seconds % 60;
+        return getDurationString(minutes, seconds);
+    }
 
 }
