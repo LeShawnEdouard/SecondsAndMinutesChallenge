@@ -9,6 +9,8 @@ public class Main {
         System.out.println(area(5.0, 4.0));
         printYearsAndDays(525600);
         printYearsAndDays(1440);
+        printYearsAndDays(-525600);
+        printYearsAndDays(0);
     }
     // Create a method called getDurationString with two parameters, first parameter
     // minutes and 2nd parameter seconds.
@@ -118,7 +120,10 @@ public class Main {
         }
         long years = minutes / 525600;
         long days = minutes / 1440;
-            System.out.println(minutes + " min = " + years + " yrs " + days + " days");
+
+        if(minutes >= 0) {
+            System.out.println(minutes + " min = " + years + " y " + "and " + days + " d");
+        }
     }
 
 
